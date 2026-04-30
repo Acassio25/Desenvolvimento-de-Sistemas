@@ -10,19 +10,191 @@
 <body>
     <header>
         <nav>
-            Inicio
-            Midias
-            Tabelas
-            Formulários
+            <a href="#inicio">Inicio</a> |
+            <a href="#midias">Midias</a> |
+            <a href="#tabelas">Tabelas</a> |
+            <a href="#lista">Lista</a> |
+            <a href="#formulario">Formulários</a>
             <h1>Exploração inicial </h1>
         </nav>
     </header>
+    <main id="inicio">
 
-    <p><i>Italico</i>, <b><u>negrito.</b></u></b></p>
-    <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        <br>Blanditiis qui, quis et consequuntur, dolor commodi praesentium adipisci velit nesciunt magnam,
-         exercitationem a aspernatur culpa obcaecati accusamus. <br>Expedita dolores sit iure!</strong></p>
-    <hr>
+        <p><i>Italico</i>, <b><u>negrito e sublinhado</u></b></p>
+        <blockquote>
+            <p><strong><q>Este é um parágrafo com citação curta e negrito.</q></strong></p>
+        </blockquote>
+
+        <hr>
+
+        <section>
+            <H3><em>Tags variadas e formatação</em></H3>
+            <mark>Marcação</mark><br>
+            <small>Letras miudas com tag small</small><br>
+            <p>X<sup>zinho</sup>, B<sub>zão</sub></p>
+
+
+            <pre>
+                <code>
+                    int main() {
+                    printf("Ola, Mundo!\n");
+                    return 0;
+                }
+                </code>
+                
+            </pre>
+
+            <p>
+                <ins>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                    Nulla dolor ipsam ratione dignissimos id dicta porro eum <br> beatae atque corrupti,
+                    vel eius neque saepe earum dolorem voluptas, aliquam, dolore excepturi.
+                </ins>
+            </p>
+            <h6>
+                <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Hic ea aspernatur non repellat quidem necessitatibus reiciendis,
+        omnis at distinctio, 
+        quam asperiores quo perspiciatis nostrum in odit! Eveniet dignissimos consectetur suscipit?</pre>
+            </h6>
+            <del>Você foi riscado</del>
+        </section>
+        <hr>
+        <section id="midias"><br>
+            <div class="imagem">
+                <figure>
+                    <img src="imagensREV/CRFao.jpg" alt="">
+                    <figcaption>Daran dan dan dan ta ta. kkkk</figcaption><br>
+                </figure>
+                <audio controls>
+                    <source src="midias/musicaREV.mpeg" type="audio/mpeg">
+                </audio>
+                <video width="640" height="360" controls>
+                    <source src="midias/videoREV.mp4" type="video/mp4">
+
+                </video><br><br>
+                <iframe src="https://g1.globo.com/" width="240" height="180" title="G1 Noticias">
+                </iframe>
+                <embed src="midias/O Monge e o Executivo.pdf">
+
+
+            </div>
+        </section>
+        <br>
+        <hr>
+        <section id="tabelas">
+            <table>
+                <table border="1">
+                    <caption>Relatório de Vendas - 2026</caption>
+
+                    <colgroup>
+                        <col style="background-color: #f2f2f2;">
+                        <col style="background-color: #ffffff; width: 100px;">
+                        <col style="background-color: #ffffff; width: 100px;">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Valor Total (R$)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Notebook</td>
+                            <td>10</td>
+                            <td>35.000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Smartphone</td>
+                            <td>25</td>
+                            <td>20.000,00</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td><strong>Total</strong></td>
+                            <td><strong>35</strong></td>
+                            <td><strong>55.000,00</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </table>
+
+        </section>
+        <section id="listas">
+            <h3>Exemplos de Listas</h3>
+            <ul>
+                <li>Floresta</li>
+                <li>Deserto</li>
+            </ul>
+            <ol>
+                <li>Árvore</li>
+                <li>Arêia</li>
+            </ol>
+            <dl>
+                <dt>Acassio</dt>
+                <dd>Estudando Html</dd>
+            </dl>
+        </section>
+
+        <hr>
+        <section id="formulario">
+            <h3>Área de Cadastro</h3>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" list="sugestoes">
+                    <datalist id="sugestoes">
+                        <option value="Acassio">
+                        <option value="Marcos">
+                    </datalist>
+                    <br><br>
+
+                    <label for="data">Selecione uma data:</label>
+                    <input type="date" id="data" name="data">
+
+                    <br><br>
+
+                    <label>Mensagem:</label><br>
+                    <textarea name="msg" rows="4" cols="30"></textarea><br>
+
+                    <button type="submit">Enviar</button>
+                    <output name="resultado"></output>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+        <aside>
+            <h4>Barra Lateral</h4>
+            <details>
+                <summary>Clique para ver mais detalhes</summary>
+                <p>Conteúdo oculto revelado!</p>
+            </details>
+            <br>
+            <time datetime="28-04-2026">Publicado em: 28 de Abril de 2026</time><br>
+            Progresso: <progress value="70" max="100"></progress><br>
+            Nível: <meter value="0.6">60%</meter>
+        </aside>
+
+        <section>
+            <h4>Canvas e Mapas</h4>
+            <canvas id="meuCanvas" width="100" height="50" border="1">Seu navegador não suporta canvas.</canvas>
+            
+            <img src="imagensREV/mapa.png"width="150px" height="150px">
+           
+            <map name="mapa-exemplo">
+                <area shape="rect" coords="0,0,50,50" href="https://google.com" alt="Google">
+            </map>
+            <template id="meuTemplate">
+                <p>Este conteúdo é do template!</p>
+            </template>
+        </section>
+    </main>
 
 </body>
 
