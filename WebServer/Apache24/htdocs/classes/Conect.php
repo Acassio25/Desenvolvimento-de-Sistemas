@@ -10,7 +10,7 @@
         function __construct()
         {
             $this->host = "localhost";
-            $this->dbname = "teste";
+            $this->dbname = "test";
             $this->password = "123456";
             $this->user = "postgres";
             $this->port = "5432";
@@ -20,13 +20,13 @@
         {
             try
             {
-                $PDO = new PDO("pgsql:host=".$this->host.";port=".$this->port.";dbname=".$this->dbname,$this->user,$this->password);
-                echo "Eu sou bom de+++";
+                $PDO = new PDO("pgsql:host=".$this->host.";port=".$this->port.";dbname=".$this->dbname,$this->user,$this->password);//contatenaçao de funçao.
+                //echo "Eu sou bom de+++";
                 return($PDO);
             }
             catch(PDOException $erro)
             {
-                $msn = "Falha no acesso com o PostGres: ".$erro->getMessage();
+                $msn = "Falha no acesso com o PostGres: ".$erro->getMessage();//mensagem de erro do Banco de Dados.
                 echo $msn;
                 return(NULL);
             }
