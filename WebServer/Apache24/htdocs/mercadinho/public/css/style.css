@@ -1,0 +1,161 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que bordas e paddings não quebrem o tamanho das caixas */
+}
+
+/* O fundo degradê e a centralização ficam apenas no body */
+body {
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(70, 128, 108, 1) 0%, rgb(77, 164, 201) 100%);
+    
+    /* Flexbox para centralizar o container no meio exato da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Uma fonte padrão para o texto não ficar cru */
+}
+
+/* Opcional: Se você não for usar o header para um menu ou logo topo, 
+   pode deixá-lo escondido ou remover do HTML para não empurrar o layout */
+header {
+    display: none; 
+}
+
+/* Estilização do seu container de login */
+.container {
+    width: 100%;
+    max-width: 450px; /* Garante que em telas menores/celulares ele não quebre */
+    background-color: rgba(255, 255, 255, 0.15); /* Um fundo semi-transparente para dar um charme */
+    backdrop-filter: blur(5px); /* Efeito de vidro desfocado atrás do container */
+    
+    padding: 30px;
+    margin: 20px;
+    border-radius: 12px;
+    
+    /* Mantive a sua ideia da borda amarela, mas com um toque um pouco mais moderno */
+    border: 4px double #ffff00;
+    
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+
+input[type="submit"] {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #ffff00;
+    color: #333;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #dddd00; 
+}
+
+.form-links {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-links p {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.form-links a {
+    color: #ffff00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+/*estilo cadastro produto*/
+.cad {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-top: 30px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+
+.tabela-produtos th {
+    padding: 12px 10px;
+    border-bottom: 2px solid #e0e0e0; 
+    font-weight: 600;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.tabela-produtos td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tabela-produtos tbody tr:hover {
+    background-color: #f9f9f9;
+}

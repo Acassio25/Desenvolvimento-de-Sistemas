@@ -16,6 +16,9 @@
         <br/>
         <input type="submit" name="cadastro" value="Cadastrar"/>
     </form>
+    <form method="post" action="visualizar.php" name="listar">
+        <input type="submit" value="Listar" name="listar"/>
+    </form>
     
 </body>
 </html>
