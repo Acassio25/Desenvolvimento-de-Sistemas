@@ -12,16 +12,16 @@ $id = $_GET["var"];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuário</title>
+    <title>Deletar Usuário</title>
     <link href="../../public/css/style_editar_usuario.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
     <div class="box">
 
-        <h1>Editar Usuário</h1>
+        <h1>Deletar Usuário</h1>
 
-        <form action="../controllers/editar_usuario_controller.php" method="POST">
+        <form action="../controllers/deletar_usuario_controller.php" method="POST">
 
             <input type="hidden" name="id" value="<?= $id;?>">
 

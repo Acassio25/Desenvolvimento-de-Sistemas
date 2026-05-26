@@ -12,12 +12,8 @@
 
         <h1>Cadastrar Usuário</h1>
 
-        <form action="#" method="POST">
+        <form action="../controllers/casdatrar_usuario_controller.php" method="POST">
 
-            <div class="input-group">
-                <label>Nome</label>
-                <input type="text" name="nome">
-            </div>
 
             <div class="input-group">
                 <label>Email</label>
