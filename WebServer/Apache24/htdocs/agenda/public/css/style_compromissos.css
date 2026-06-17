@@ -1,0 +1,120 @@
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-novo {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-compromisso {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s;
+}
+
+/*.card-compromisso:hover {
+    transform: translateX(5px);
+    border-color: #007bff;
+}*/
+
+.data-badge {
+    width: 60px;
+    height: 65px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.data-badge .dia {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.data-badge .mes {
+    font-size: 11px;
+    font-weight: bold;
+    opacity: 0.9;
+}
+
+.azul { background-color: #007bff; }
+.vermelho { background-color: #dc3545; }
+.verde { background-color: #28a745; }
+.roxo { background-color: #6f42c1; }
+
+
+.info-compromisso {
+    flex-grow: 1; 
+}
+
+.info-compromisso h3 {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.infor-compromisso p {
+    color: #777;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.mini-icon {
+    width: 14px;
+    height: 14px;
+    opacity: 0.5;
+}
+
+.tag-categoria {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tag-azul { background: #e7f1ff; color: #007bff; }
+.tag-vermelho { background: #fdf2f2; color: #dc3545; }
+.tag-verde { background: #f0fdf4; color: #28a745; }
+.tag-roxo { background: #f5f0ff; color: #6f42c1; }
+
+.acoes-compromisso {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-check, .btn-edit {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-check:hover { background: #28a745; color: white; border-color: #28a745; }
+.btn-edit:hover { background: #f8f9fa; border-color: #bbb; }

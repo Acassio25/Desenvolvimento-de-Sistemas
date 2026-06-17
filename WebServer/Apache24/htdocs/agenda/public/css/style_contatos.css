@@ -1,0 +1,100 @@
+
+.titulo-pagina-contatos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-adicionar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-adicionar:hover {
+    background-color: #218838;
+}
+
+.container-tabela {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    overflow-x: auto;
+}
+
+.tabela-contatos {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela-contatos th {
+    background-color: #f8f9fa;
+    color: #495057;
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tabela-contatos td {
+    padding: 15px;
+    border-bottom: 1px solid #dee2e6;
+    color: #495057;
+    vertical-align: middle;
+}
+
+.tabela-contatos tbody tr:hover {
+    background-color: #f1f3f5;
+}
+
+.avatar-letra {
+    width: 35px;
+    height: 35px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-acao {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.btn-editar {
+    background-color: #e3f2fd;
+    color: #0d6efd;
+}
+
+.btn-editar:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-excluir {
+    background-color: #ffebee;
+    color: #dc3545;
+}
+
+.btn-excluir:hover {
+    background-color: #dc3545;
+    color: white;
+}

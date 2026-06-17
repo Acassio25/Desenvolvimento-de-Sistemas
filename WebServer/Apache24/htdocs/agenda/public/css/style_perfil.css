@@ -1,0 +1,134 @@
+.card-perfil {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.layout-perfil {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+}
+
+.coluna-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #dee2e6;
+    padding-right: 20px;
+}
+
+.avatar-perfil {
+    width: 120px;
+    height: 120px;
+    background-color: #031d48;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-foto {
+    display: inline-block;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-foto:hover {
+    background-color: #e2e6ea;
+}
+
+.info-foto {
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.coluna-dados {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo-form {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; 
+}
+
+.grid-campos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.campo-grupo:first-child {
+    grid-column: span 2;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-grupo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.campo-grupo input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+.campo-grupo input:focus {
+    border-color: #007bff;
+}
+
+.linha-divisoria {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #dee2e6;
+}
+
+.container-botao {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.btn-salvar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+.btn-salvar:hover {
+    background-color: #0056b3;
+}
