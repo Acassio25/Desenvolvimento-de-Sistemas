@@ -1,3 +1,26 @@
+<?php
+    session_name("agenda");
+    session_start();
+
+
+    if (!isset($_SESSION['usuario_id']))
+    {
+        header("Location: ../../index.php");
+        exit();
+    }
+
+    $link_foto_usuario = $_SESSION['usuario_foto'] ?? ''; 
+    $mensagem = "";
+
+    if (isset($_GET['sucesso'])) 
+    {
+        $mensagem = "<p style='color: green; text-align: center; font-weight: bold; margin-bottom: 15px;'>Foto atualizada com sucesso!</p>";
+    } 
+    elseif (isset($_GET['erro'])) 
+    {
+        $mensagem = "<p style='color: red; text-align: center; font-weight: bold; margin-bottom: 15px;'>Erro ao processar o upload. Tente novamente.</p>";
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +42,7 @@
                 <li><a href="compromissos.php"><img class="img-cont" src="../../public/img/compromisso.png" alt="compromisso"> Compromissos</a></li>
                 <li><a href="perfil.php" class="active"><img class="img-cont" src="../../public/img/perfil.png" alt="">Perfil</a></li>
                 <li><a href="#"><img class="img-cont" src="../../public/img/configuracao.png" alt="">Configurações</a></li>
-                <li><a href="#"><img class="img-cont" src="../../public/img/sair.png" alt="">Sair</a></li>
+                <li><a href="../controllers/logoff.php"><img class="img-cont" src="../../public/img/sair.png" alt="">Sair</a></li>
             </ul>
         </aside>
 
@@ -33,7 +56,7 @@
                         </form>
                     </div>
                     <div class="perfil-topo">
-                        <span>Administrador</span>
+                        <span><?php echo $_SESSION['usuario_nome'] ?? 'Administrador'; ?></span>
                     </div>
                 </div>
                 
@@ -46,17 +69,26 @@
             </header>
 
             <div class="card-perfil">
-                <form action="/salvar-perfil" method="POST">
+                <?php echo $mensagem; ?>
+
+                <form action="../controllers/salvar_perfil.php" method="POST" enctype="multipart/form-data">
                     
                     <div class="layout-perfil">
                         <div class="coluna-foto">
-                            <div class="avatar-perfil">
-                                <span>AD</span>
+                            <div class="avatar-perfil" style="overflow: hidden; display: flex; align-items: center; justify-content: center; background-color: #ddd; width: 120px; height: 120px; border-radius: 50%;">
+                                <?php 
+                                
+                                if (!empty($link_foto_usuario) && file_exists($link_foto_usuario)): ?>
+                                    <img src="<?php echo $link_foto_usuario; ?>?t=<?php echo time(); ?>" alt="Foto de Perfil" style="width: 100%; height: 100%; object-fit: cover;">
+                                <?php else: ?>
+                                    <span style="font-size: 2rem; color: #555;">AD</span>
+                                <?php endif; ?>
                             </div>
-                            <label class="btn-foto" for="foto">Alterar Foto</label>
-                            <input type="file" name="imagem" id="foto" hidden />
-                        </div>
 
+                            <label class="btn-foto" for="foto" style="cursor: pointer;">Alterar Foto</label>
+                            <input type="file" name="imagem" id="foto" hidden onchange="this.form.submit()" />
+                        </div>
+                        
                         <div class="coluna-dados">
                             <h2 class="subtitulo-form">Dados Pessoais</h2>
                             <div class="grid-campos">

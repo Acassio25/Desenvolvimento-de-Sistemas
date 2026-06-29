@@ -18,7 +18,7 @@
         </div>
         
         <div class="lado-dir">
-            <form action="processa_login.php" method="POST"> 
+            <form action="app/controllers/login.php" method="POST"> 
                 <h2>Login</h2>
                 
                 <div class="input-login">
@@ -38,7 +38,7 @@
             </form>
 
             <div class="link-cadastro">
-                <p>Não tem uma conta? <a href="../agenda/app/views/cadastro.php">Cadastrar-se aqui</a></p>
+                <p>Não tem uma conta? <a href="app/views/cadastro.php">Cadastrar-se aqui</a></p>
             </div>
         </div>
 

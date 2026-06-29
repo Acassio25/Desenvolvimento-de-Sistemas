@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($sucesso) {
             echo '<script>
                     alert("Usuário cadastrado com sucesso!");
-                    window.location.href = "http://localhost/agenda/app/views/index.php";
+                    window.location.href = "http://localhost/agenda/app/dashboard.php";
                   </script>';
         } else {
             echo '<script>
@@ -32,8 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 window.history.back();
               </script>';
     }
-} else {
-    header("Location: cadastro.php");
-    exit();
-}
+    } else {
+     header("Location: cadastro.php");
+     exit();
+    }
 ?>

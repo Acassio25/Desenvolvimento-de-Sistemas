@@ -28,7 +28,7 @@
             $vetor = $stmt->fetch(PDO::FETCH_ASSOC);
             if(isset($vetor["email"]) && ($vetor["senha"]))
             {
-               return(TRUE);
+               return($vetor);
             }
             else
             {
@@ -78,7 +78,7 @@
             {
              echo '<script>
                    alert("Usuario atualizado com sucesso.");
-                   window.location.href="http://localhost/painel/app/views/listar_usuario.php";
+                   window.location.href="http://localhost/agenda/app/views/cadastro.php";
                 </script>';
             }
             else
@@ -96,7 +96,7 @@
           {
             echo '<script>
                    alert("Usuario Deletado com sucesso.");
-                   window.location.href="http://localhost/painel/app/views/listar_usuario.php";
+                   window.location.href="http://localhost/agenda/app/views/cadastro.php";
                 </script>';
           }
           else
@@ -105,9 +105,7 @@
           }
         }
 
-        /* ==========================================================================
-           AQUI ENTRA A FUNÇÃO SUBSTITUÍDA (ATUALIZADA PARA O POSTGRESQL / CADASTRO)
-           ========================================================================== */
+        
         public function CadastrarUsuario($nome, $telefone, $email, $senha)
         {
             // Query contendo os novos campos pedidos (nome, telefone)
